@@ -61,7 +61,7 @@ class Blockchain:
 
 # Test cases
 
-# Edge  Case
+# Edge  Case 1
 
 
 print("Blockchain length  :", Blockchain().length())
@@ -69,6 +69,19 @@ print("Number of stored values in the Blockchain :", Blockchain().head)
 # Expected output
 # Blockchain size : 0
 # Number of stored values in the Blockchain : None
+
+# Edge case 2
+blockchain = Blockchain()
+blockchain.append("", 0)
+print("length of blockchain : ", blockchain.length())
+for value in blockchain.list():
+    print(value)
+# Expected output
+# The Blockchain data consists :
+# Data:
+# Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+# Time stamp: 2021-09-13 18:07:04.742438
+
 
 
 # Test case 1

@@ -74,14 +74,30 @@ def huffman_decoding(info, huffman_tree):
 
 if __name__ == "__main__":
     codes = {}
-    # Edge case
+    # Edge case 1
     a_great_sentence = ""
     encoded_data, tree = huffman_encoding(a_great_sentence)
     decoded_data = huffman_decoding(encoded_data, tree)
     print(encoded_data, tree)
     print(decoded_data)
-
-    # test case 1
+    print()
+    print()
+    # Edge case 2
+    a_great_sentence = "AAAAAAAAAAAAABBB"
+    print("The size of the data \
+    is: {}\n".format(sys.getsizeof(a_great_sentence)))
+    print("The content of the data is: {}\n".format(a_great_sentence))
+    encoded_data, tree = huffman_encoding(a_great_sentence)
+    print("The size of the \
+    encoded data is: {}\n".format(sys.getsizeof(int(encoded_data, base=2))))
+    print("The content of the encoded data is: {}\n".format(encoded_data))
+    decoded_data = huffman_decoding(encoded_data, tree)
+    print("The size of the \
+    decoded data is: {}\n".format(sys.getsizeof(decoded_data)))
+    print("The content of the encoded data is: {}\n".format(decoded_data))
+    print()
+    print()
+    # Test case 1
     a_great_sentence = "The bird is the word"
     print("The size of the data \
     is: {}\n".format(sys.getsizeof(a_great_sentence)))

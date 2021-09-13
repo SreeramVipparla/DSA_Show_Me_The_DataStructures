@@ -42,6 +42,11 @@ print(find_files(suffix='', path=base))
 # Expected output
 # []
 
+print(find_files(suffix='z', path=base))
+# Expected output
+# []
+
+
 # Normal Cases:
 
 print(find_files(suffix='c', path=base))
@@ -51,7 +56,3 @@ print(find_files(suffix='c', path=base))
 print(find_files(suffix='h', path=base))
 # Expected output
 # ['t1.h', 'a.h', 'a.h', 'b.h']
-
-print(find_files(suffix='z', path=base))
-# Expected output
-# []

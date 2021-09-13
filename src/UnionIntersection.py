@@ -96,7 +96,7 @@ def intersection(linkedlist_1, linkedlist_2):
 
 # Edge Cases
 
-
+# Edge case 1 
 linked_list_5 = LinkedList()
 linked_list_6 = LinkedList()
 element_1 = []
@@ -113,9 +113,24 @@ print(intersection(linked_list_5, linked_list_6))
 
 # Expected output
 # None
+# Edge case 2
+linked_list_7 = LinkedList()
+linked_list_8 = LinkedList()
+element_1 = [1, 2, 3]
+element_2 = []
 
+for i in element_1:
+    linked_list_5.append(i)
+
+for i in element_2:
+    linked_list_6.append(i)
+
+print(union(linked_list_5, linked_list_6))
+print(intersection(linked_list_5, linked_list_6))
+
+# Expected output
+# 1 -> 2 -> 3 -> None
 # Test case 1
-
 
 linked_list_1 = LinkedList()
 linked_list_2 = LinkedList()

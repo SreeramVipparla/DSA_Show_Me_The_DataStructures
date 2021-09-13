@@ -31,13 +31,13 @@ def is_user_in_group(user, group):
       group(class:Group): group to check user membership against
     """
 
-    list = group.get_groups()
-    for character in list:
-        return is_user_in_group(user, character)
-    if user in group.get_groups():
+    if user in group.get_users():
         return True
     else:
-        return False
+        list = group.get_groups()
+        for character in list:
+            return is_user_in_group(user, character)
+    return False
 
 
 parent = Group("parent")
@@ -53,10 +53,14 @@ parent.add_group(child)
 
 # Test Cases
 
-# Edge case
+# Edge case 1
 print(is_user_in_group(user='', group=parent))
 # Expected output
 # [False]
+# Edge case 2
+print(is_user_in_group(user='', group=child))
+# Expected output
+# False
 
 # Test 1
 print(is_user_in_group(user='child_user', group=parent))
@@ -67,3 +71,7 @@ print(is_user_in_group(user='child_user', group=parent))
 print(is_user_in_group(user='parent_user', group=parent))
 # Expected output
 # [False]
+#  Test 3
+print(is_user_in_group(user='sub_child_user', group=parent))
+# Expected output
+# True

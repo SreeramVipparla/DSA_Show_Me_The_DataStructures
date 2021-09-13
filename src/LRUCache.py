@@ -86,11 +86,19 @@ print(our_cache.get(9))
 # Expected output
 # -1
 
-# Edge Case
+# Edge Cases
+# Edge case 1
 our_cache = LRU_Cache(0)
 our_cache.set(1, 2)
 
 print(our_cache.get(10))
 
+# Expected output
+# -1
+# Edge case 2
+our_cache = LRU_Cache(-1)
+our_cache.set(1, 2)
+
+print(our_cache.get(10))
 # Expected output
 # -1
