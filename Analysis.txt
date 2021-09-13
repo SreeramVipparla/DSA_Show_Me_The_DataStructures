@@ -1,0 +1,74 @@
+Analysis and Explanation
+
+# Task1-
+LRUCache.py-
+In this code i solved the problem using ordereddict to traqck the least recently used cache.
+i have also used a map for storing the values with the corresponding keys.
+Time complexity-
+Here the time complexity of the get and set stack is O(1).
+
+Space complexity-
+since the maximum number of defined elements is n.Therefore the space efficieny of the code is O(2n)[or O(n)]
+
+
+
+# Task2-
+FileRecursion.py-
+In this problem we use the os lisbrary for listing the files and folders available and join two strings to make a path.
+In this code we can also recursively call the same function with each indivisual folder.
+
+Time complexity-
+Here,In the code the time complexity depends on the number of folders and files present in each indivisual folder.
+Hence time complexity is O(n).(n is the number of files)
+The worst case senario is when each call makes its own stack frame  that takes place on a call stack.
+Due to this the time complexity is O(n).
+
+Space complexity-
+The space complexity of the code is O(n)
+
+# Task3-
+HuffmanCoding.py-
+Here in this code I used  the heapq library to solve the code.
+This code have a number of steps that involve mapping from a tree,encoding the data and decoding the data.
+
+Time complexity-
+Here the time complexity of the code is O(n) because while 
+executing the code we loop over all the characters then Loops over the frequencies to make a heap.
+
+Space Complexity-
+since in the code we use a dictionary,heap and recursion the space complexity of the code is 0(nlogn)
+
+# Task4-
+ActiveDirectory.py-
+In this problem there consists a group with multiple groups within.Here we use the defined function recursively to find out the specific group that we are looking for.
+
+Time complexity-
+Here in the code the time complexity completely depends on the number of groups(G) and the number of users(U).
+Therefore the time complexity of the code is O(GU)
+Space complexity-
+The space complexity of the code is also O(GU)
+
+# Task5-
+Blockchain.py-
+In this code to solve the problem i have used 3 specific functions that return the value of the blockchain data,timestamp and Hash.
+this code consists of two classes blockchain and block.
+
+Time complexity-
+Here in the code the time complexity depends on the functions used.
+Therefore the time complexity is O(1+n+n)[or O(n)].
+
+Space complexity-
+The space complexity depends on the space required to store the value in each node.Here since it is constant,The space complexity of the code is O(n)
+
+# Task6-
+UnionIntersection.py-
+This project involves the finding of the union and the intersection of two given sets.
+To solve this issue i habe used 2 linkedlists( union and intersection).
+
+Time complexity-
+Here in the code the worst case senario includes when the elements are unique for for the  union funciton-COMplexity-O(n+m)
+Whereas the worst case senario for similar elements in the linked list the time complexity is O(n)(where n=m)
+
+Space complexity-
+The space complexity of the code is similar to that of the time complexity O(n+m) for unique elements in the union function 
+and O(n) for similar elements for the intersection function.
